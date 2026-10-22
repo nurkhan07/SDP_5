@@ -1,0 +1,25 @@
+@startuml
+title Strategy Pattern - Route Planning
+class Main <<Client>>
+class Navigator <<Context>> {
+  - strategy : RouteStrategy
+  + Navigator(strategy : RouteStrategy)
+  + setStrategy(strategy : RouteStrategy) : void
+  + planRoute(origin : String, destination : String, distanceKm : double) : RouteResult
+}
+interface RouteStrategy {
+  + buildRoute(origin : String, destination : String, distanceKm : double) : RouteResult
+}
+class CarStrategy
+class WalkStrategy
+class CycleStrategy
+class RouteResult <<Result>>
+Main --> Navigator : uses
+Navigator o--> RouteStrategy : delegates to
+RouteStrategy <|.. CarStrategy
+RouteStrategy <|.. WalkStrategy
+RouteStrategy <|.. CycleStrategy
+CarStrategy ..> RouteResult
+WalkStrategy ..> RouteResult
+CycleStrategy ..> RouteResult
+@enduml
