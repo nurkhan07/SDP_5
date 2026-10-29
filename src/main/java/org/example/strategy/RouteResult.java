@@ -1,3 +1,4 @@
+//have start of route and transport and distance
 package org.example.strategy;
 public record RouteResult(String origin, String destination, String transportMode,
                           double distanceKm, int estimatedMinutes, String description) {

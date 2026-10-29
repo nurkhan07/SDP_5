@@ -1,3 +1,5 @@
+//calculate the route for a car
+//concrete strategy
 package org.example.strategy;
 public class CarStrategy implements RouteStrategy {
     private static final double AVERAGE_SPEED_KMH = 40.0;

@@ -1,3 +1,5 @@
+//calculate walking route
+//concrete strategy
 package org.example.strategy;
 public class CycleStrategy implements RouteStrategy {
     private static final double AVERAGE_SPEED_KMH = 18.0;

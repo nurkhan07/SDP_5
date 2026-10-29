@@ -1,3 +1,4 @@
+//gives task to the strategy to build a route between two locations
 package org.example.strategy;
 import java.util.Objects;
 /** Context: delegates to the currently selected strategy. */
